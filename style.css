@@ -381,19 +381,22 @@ option {
 }
 
 .faq-answer {
-    display: none;
-
-    padding: 1rem 2rem;
+    max-height: 0;
+    margin: 5px auto;
+    overflow: hidden;
+    padding: 0 2rem;
     background-color: #414141;
-    margin-top: 1rem;
     font-size: 16px;
     line-height: 1.5;
     color: #ccc;
+    transition: all 0.5s linear;
+    opacity: 0;
 }
 
 .faq-item.active .faq-answer {
-    margin-top: 0.2rem;
-    display: block;
+    max-height: 1000px; /* or any value that would accommodate your content */
+    padding: 1rem 2rem;
+    opacity: 1;
 }
 
 .faq-item.active .icon {
